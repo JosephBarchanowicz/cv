@@ -1,0 +1,361 @@
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+ul{
+  list-style-type: none;
+}
+
+
+
+
+/* Nav-bar */
+
+
+
+.container-navbar{
+  margin: 20px;
+}
+
+.navbar{
+  background-color: #35858B;
+}
+
+.navbar-light{
+  color: #FFFFFF;
+}
+
+.nav-brand{
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color:#FFFFFF;
+  text-decoration: none;
+}
+
+.nav-brand:hover{
+  color:#151D3B;
+  text-decoration: none;
+}
+
+.nav-link{
+  color:#FFFFFF;
+  font-weight: bold;
+}
+
+.nav-link:hover{
+  color:#151D3B;
+}
+
+.active{
+  color:#FFFFFF;
+  text-decoration: underline;
+}
+
+.mar-rt{
+  margin-right:50px;
+}
+
+.btn-link{
+  color:#FFFFFF;
+  text-decoration: none;
+}
+
+.btn-link:hover{
+  color:#FFFFFF;
+}
+
+
+
+
+/* banner */
+
+
+
+.banner-image-large{
+  width:100%;
+}
+
+.banner-image-small{
+  width:0;
+}
+
+.main{
+  padding:0;
+}
+
+.banner{
+  position: relative;
+}
+
+.banner-title-dom{
+  font-weight: 700;
+  font-size: 3rem;
+  color:#151D3B;
+}
+
+.banner-title{
+  font-weight: 500;
+  font-size: 1.4rem;
+  color:#585d5e;
+}
+
+.banner-heading {
+  text-align: center;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  width: 50%;
+  padding-top: 50px;
+}
+
+.banner-button{
+  background-color: #35858B;
+  color: #FFFFFF;
+}
+
+.banner-button:hover{
+  background-color: #151D3B;
+  color: #FFFFFF;
+}
+
+@media (max-width: 650px) {
+
+  .banner-title{
+    color:#151D3B;
+  }
+
+  .banner-heading {
+    text-align: center;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 375px) {
+
+  .banner-image-large{
+    width:0;
+  }
+
+  .banner-image-small{
+    width:100%;
+  }
+
+
+  .banner-title{
+    color:#585d5e;
+  }
+
+  .banner-heading {
+    text-align: center;
+    background-color: transparent;
+    position: static;
+    bottom: 0;
+    width: 100%;
+    padding-top: 10px;
+  }
+}
+
+
+
+/* about */
+
+.about{
+  margin:75px 0;
+}
+ .about-row{
+   margin-right:0;
+   margin-left: 0;
+ }
+
+.about-image-col{
+  margin: auto;
+  display: block;
+  padding-left: 0;
+  padding-right:0;
+}
+
+
+.about-image{
+  width: 100%;
+
+}
+
+.par-col{
+  text-align: center;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.about-title{
+  font-weight: 700;
+  font-size: 3rem;
+  color:#151D3B;
+}
+
+.about-paragraph{
+  font-weight: 500;
+  text-align: left;
+  color:#585d5e;
+  vertical-align: middle;
+}
+
+.about-button{
+  background-color: #35858B;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.about-button:hover{
+  background-color: #151D3B;
+  color: #FFFFFF;
+}
+
+
+@media (max-width: 765px) {
+
+  .about-paragraph{
+    font-weight: 400;
+    text-align: left;
+    color:#585d5e;
+    vertical-align: middle;
+  }
+
+  .par-col{
+    margin:0 20px;
+  }
+
+}
+
+
+
+/* footer */
+
+
+
+.footer-section{
+  background-color: #35858B;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 40px 40px;
+}
+
+.footer-title{
+  color: #FFFFFF;
+}
+
+.footer-brands {
+  color: #FFFFFF;
+  margin: 0 40px;
+}
+
+.footer-brands:hover {
+  color: #151D3B;
+}
+
+
+
+/* projects */
+
+
+
+.project-headers{
+  text-align: center;
+  color: #151D3B;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+.hdl-img-col{
+  display: block;
+  text-align: center;
+}
+
+.project-img{
+  width: 300px;
+  height: 250px;
+}
+
+.project-list{
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  color:#585d5e;
+}
+
+@media (max-width: 350px) {
+
+  .project-img{
+    width: 150px;
+    height: 115px;
+  }
+
+}
+
+
+
+/* contact */
+
+
+
+.contact-banner-dom{
+  text-align: center;
+  padding-top: 20px;
+}
+
+.contact-banner{
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.contact-col{
+  margin-top: 10px;
+}
+
+.message-box{
+  height: 250px;
+}
+
+.message-submit{
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 50px
+}
+
+@media (max-width: 995px){
+
+  .message-submit{
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .message-box{
+    height: 200px;
+  }
+}
+
+@media (max-width: 575px){
+
+  .main-contact{
+    padding: 0 20px;
+  }
+
+  .contact-banner{
+    font-size: .8rem;
+    font-weight: 400;
+    padding-bottom: 10px;
+  }
+}
+
+@media (max-width: 275px){
+
+  .message-box{
+    height: 100px;
+  }
+
+}
