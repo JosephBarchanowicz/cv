@@ -1,80 +1,102 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<head>
-  <meta charset="utf-8">
-  <title>Joe's Personal Site</title>
-</head>
+    <title>Joe Barchanowicz</title>
 
-<body>
+    <link rel="icon" href="images/favicon.ico">
 
-  <table cellspacing="20">
-    <tr>
-      <td><img src="images/joe.png" alt="Joe Profile Picture"></td>
-      <td>
-        <h1>Joseph Barchanowicz</h1>
-        <p><em><strong>Computer Engineer</strong></em></p>
-        <p>I am a recent graduate from California State University Northridge with a B.S. in Computer Engineering.</p>
-      </td>
-    </tr>
-  </table>
+    <!-- style sheets -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
 
-  <hr>
+    <!-- scripts -->
+    <script src="js/bootstrap.bundle.min.js" charset="utf-8"></script>
 
-  <h3>Education</h3>
-  <ul>
-    <li>California State University Northridge, 2021, B.S. Computer Engineering</li>
-    <li>University of Phoenix, 2013, B.S. Business w/ concentration in Finance</li>
-  </ul>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
-  <hr>
+    <!-- Font Awesome Images -->
+    <script src="https://kit.fontawesome.com/9eca3c59fb.js" crossorigin="anonymous"></script>
 
-  <h3>Work Experience</h3>
-  <table cellspacing="10">
-    <thead>
-      <tr>
-        <th>Dates</th>
-        <th>Work</th>
-      </tr>
-    </thead>
+  </head>
 
-    <tbody>
-      <tr>
-        <td>2003-2016</td>
-        <td>Electronics technician U.S. Coast Guard</td>
-      </tr>
-      <tr>
-        <td>2013</td>
-        <td>Technical Writer Vector CSP</td>
-      </tr>
-    </tbody>
-  </table>
+  <body>
 
-  <hr>
-
-  <h3>Skills</h3>
-  <table cellspacing="10">
-    <tbody>
-      <tr>
-        <td>Python</td>
-        <td>⭐⭐⭐⭐</td>
-      </tr>
-      <tr>
-        <td>C</td>
-        <td>⭐⭐</td>
-      </tr>
-      <tr>
-        <td>VHDL</td>
-        <td>⭐⭐</td>
-      </tr>
-    </tbody>
-  </table>
+    <!-- navbar -->
+    <nav class="navbar sticky-top navbar-expand-md">
+      <div class="container-fluid container-navbar">
+        <a class="nav-brand" href="index.html">JRB</a>
+        <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item mar-rt">
+              <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+            </li>
+            <li class="nav-item mar-rt">
+              <a class="nav-link" href="projects.html">PROJECTS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
 
+    <main class="container-fluid main">
+      <section class="banner">
+        <div class="banner-image">
+          <img class="banner-image-large" src="images/ban_image.png" alt="banner_image">
+          <img class="banner-image-small" src="images/ban_image_small.jpg" alt="banner_image_small">
+          <div class="banner-heading">
+            <p class="banner-title-dom">Hi, I’m Joe.</p>
+            <p class="banner-title">a computer engineer.</p>
+            <button class="btn banner-button" type="button" name="button">
+              <a class="btn-link" href="#about">ABOUT ME</a>
+            </button>
+          </div>
+        </div>
+      </section>
 
-  <hr>
-  <a href="hobbies.html">My Hobbies</a>
-  <a href="contact.html">Contact Information</a>
-</body>
+
+      <section class="about">
+        <div class="row gx-5 about-row">
+          <div class="col-lg-6 about-image-col">
+            <img class="about-image rounded" src="images/about_picture.jpg" alt="about_picture">
+          </div>
+          <div class="col-lg-6 par-col">
+            <p class="about-title" id="about">About Me</p>
+            <p class="about-paragraph">I am a recent computer engineering graduate looking for a new role in an exciting company.
+              The hardware description language (HDL) that I primarily work with is VHDL but I have experience using Verilog.
+              The high-level programming languages that I primarily work with are Python, C and MATLAB, but I have experiece using Java.
+              I am currently based in Newcastle, Australia, but I am happy working remotely and have experience in remote teams.
+              Please check out my projects for some of my code writing examples.</p>
+            <button class="btn about-button"type="button" name="button">
+              <a class="btn-link" href="projects.html">PROJECTS</a>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section>
+      <footer class="footer-section">
+        <div class="container-fluid">
+          <a href="https://www.linkedin.com/in/joe-barchanowicz-53021452/"><i class="social-icon fa-brands fa-linkedin footer-brands"></i></a>
+          <i class="social-icon fa-brands fa-github footer-brands"></i>
+          <a href="contact.html"><i class="social-icon fa-solid fa-envelope footer-brands"></i></a>
+        </div>
+      </footer>
+    </section>
+
+  </body>
 
 </html>
