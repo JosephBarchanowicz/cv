@@ -369,7 +369,7 @@ ul{
     background-color: #35858B;
     font-size: 1.2rem;
     text-align: center;
-    padding: 40px 10px;
+    padding: 40px 40px;
   }
 
   .footer-brands {
@@ -378,7 +378,7 @@ ul{
   }
 }
 
-@media (max-width: 250px){
+@media (max-width: 310px){
 
   .footer-section{
     background-color: #35858B;
