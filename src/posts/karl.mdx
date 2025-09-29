@@ -1,0 +1,28 @@
+export const meta = {
+  title: 'K.A.R.L. Project — Autonomous Rover',
+  updated: new Date().toISOString()
+}
+
+# Overview & Goals {#karl-intro}
+K.A.R.L. is my autonomous rover platform focused on reliable, field-friendly autonomy.
+The goal is to combine a real-time control layer with ROS2-based perception and planning,
+while keeping the system debuggable and maintainable for rapid iteration.
+
+## Hardware Stack {#karl-hardware}
+- **Chassis & Drive:** differential drive base with encoders
+- **Sensing:** IMU, wheel encoders, optional LIDAR/depth camera
+- **Compute:** SBC for ROS2 nodes + microcontroller for RTOS control loop
+- **I/O & Buses:** CAN/SPI/I²C/UART as required
+- **Power:** regulated rails with monitoring
+
+## Software Architecture {#karl-software}
+A layered approach: low-level motor control on RTOS (deterministic loop), with ROS2 handling
+node graph, transforms, sensor fusion, and higher-level behaviors. Telemetry and parameters are
+exposed over ROS2 topics/services for tuning.
+
+```text
+/robot_state_pub   -> tf, odom
+/imu_driver        -> /imu/data
+/encoder_driver    -> /wheel/odom
+/controller_node   -> /cmd_vel (RTOS bridge)
+/planner_node      -> target waypoints
