@@ -88,11 +88,13 @@ const projects = [
         ]
     },
     {
-        title: "Dummy Project",
-        tagline: "Coming soon",
-        description: "Placeholder for future project.",
-        stack: ["TBD"],
-        links: []
+        title: "Motor Driver Control System",
+        tagline: "Motor Control • MicroPython",
+        description: "This project uses a Raspberry Pi Pico running MicroPython to control two TT-style DC motors through an L298N motor driver board. " +
+            "The Pico’s GPIO pins send logic signals and PWM to drive the motors forward, backward, and at variable speeds. " +
+            "It’s a simple, low-cost way to learn motor control and a great starting point for robotics builds, DIY vehicles, or motion-based projects.",
+        stack: ["MicroPython", "Raspberry Pi Pico"],
+        links: [{ label: "Code", href: "https://github.com/JosephBarchanowicz/Motor_Driver_Python/tree/main/motor_driver_code" }]
     }
 ];
 
@@ -179,7 +181,7 @@ function AppShell({ children }) {
             <footer className="border-t border-white/10 mt-10">
                 <div className="mx-auto max-w-6xl px-4 py-10 text-sm text-slate-400">
                     <div className="flex flex-wrap items-center justify-between gap-4">
-                        <p>© {new Date().getFullYear()} Joe Barchanowicz • Field_AI</p>
+                        <p>© {new Date().getFullYear()} Joe Barchanowicz</p>
                         <div className="flex items-center gap-2">
                             <span className="opacity-80">Built with</span>
                             <span className="inline-flex items-center gap-1">React • Tailwind (CDN) • framer-motion</span>
@@ -199,14 +201,14 @@ function HomePage() {
             <section id="home" className="relative overflow-hidden">
                 <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60rem_30rem_at_80%_-10%,rgba(56,189,248,0.15),transparent),radial-gradient(40rem_20rem_at_0%_20%,rgba(34,197,94,0.1),transparent)]" />
                 <div className="mx-auto max-w-6xl px-4 py-20 md:py-28 grid md:grid-cols-12 gap-10 items-center">
-                    <motion.div initial={{opacity:0,y:12}} animate={{opacity:1,y:0}} transition={{duration:0.6}} className="md:col-span-7">
-                        <h1 className="text-3xl md:text-5xl font-semibold leading-tight">Engineer by trade, maker at heart.</h1>
+                    <motion.div initial={{opacity:0,y:12}} animate={{opacity:1,y:0}} transition={{duration:0.6}} className="md:col-span-7 flex flex-col items-center text-center">
+                        <h1 className="text-3xl md:text-5xl font-semibold leading-tight">Maker at heart, Engineer by trade.</h1>
                         <p className="mt-4 md:text-lg text-slate-300">I’m Joe Barchanowicz — an electronics and RF engineer who is also a passionate maker and coder. I love building things, experimenting with hardware and software, and creating systems that are both functional and reliable. I have worked across defense, industrial, and renewable energy fields, applying my skills to diverse and challenging environments.</p>
-                        <div className="mt-6 flex gap-3 flex-wrap">
+                        <div className="mt-6 flex gap-3 flex-wrap justify-center">
                             <a className="inline-block" href="#projects"><Button asChild><span>View Projects</span></Button></a>
                             <a className="inline-block" href="#contact"><Button variant="secondary" asChild><span className="inline-flex items-center"><Mail className="mr-2 h-4 w-4"/>Get in touch</span></Button></a>
                         </div>
-                        <div className="mt-6 text-sm text-slate-400 flex gap-3 flex-wrap">
+                        <div className="mt-6 text-sm text-slate-400 flex gap-3 flex-wrap justify-center">
                             <span className="inline-flex items-center gap-1"><MapPin className="h-4 w-4"/>Southern California</span>
                             <span className="inline-flex items-center gap-1"><Radio className="h-4 w-4"/>Mission-critical comms</span>
                             <span className="inline-flex items-center gap-1"><Cpu className="h-4 w-4"/>Renewable energy systems</span>
