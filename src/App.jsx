@@ -45,29 +45,6 @@ export function buildMailto(to, name, email, message) {
     return `mailto:${to}?subject=${subject}&body=${body}`;
 }
 
-// --- Dev tests (console assertions; run only in dev) ------------------------
-// if (typeof window !== "undefined" && import.meta?.env?.MODE !== "production") {
-//     try {
-//         const t1 = buildMailto("joe@example.com", "Joe", "a@b.com", "Hello");
-//         console.assert(t1.includes("mailto:joe@example.com?subject=Portfolio%20Inquiry%20from%20Joe"), "T1: subject encodes name");
-//         console.assert(t1.includes("Hello%0A%0AFrom%3A%20a%40b.com"), "T1: body encodes newline + email");
-//
-//         const t2 = buildMailto("joe@example.com", "José", "x@y.com", "¡Hola!");
-//         console.assert(t2.includes("Jos%C3%A9"), "T2: UTF-8 in name encoded");
-//         console.assert(t2.includes("%C2%A1Hola!"), "T2: UTF-8 in body encoded");
-//
-//         const t3 = buildMailto("joe@example.com", "", "", "");
-//         console.assert(/subject=Portfolio%20Inquiry%20from%20/.test(t3), "T3: subject present with empty name");
-//
-//         const t4 = buildMailto("joe@example.com", "A&B", "a+b@x.com", "Ampersand & plus");
-//         console.assert(t4.includes("A%26B"), "T4: & encoded in name");
-//         console.assert(t4.includes("Ampersand%20%26%20plus"), "T4: & encoded in body");
-//     } catch (err) {
-//         // eslint-disable-next-line no-console
-//         console.warn("Dev tests failed:", err);
-//     }
-// }
-
 // Data
 const skills = [
     "Python", "C/C++", "ROS2 (rclpy)", "Embedded Linux", "RTOS", "CAN/SPI/I²C/UART",
@@ -83,7 +60,7 @@ const projects = [
             "An autonomous rover platform built with ROS2 and RTOS, integrating sensors, control logic, and real-time validation for reliable navigation.",
         stack: ["ROS2", "RTOS", "C/C++", "Python"],
         links: [
-            { label: "Code", href: "https://github.com/JosephBarchanowicz/Python-Practice" },
+            { label: "Code", href: "https://github.com/JosephBarchanowicz/The-KARL-Project" },
             { label: "Blog", href: "/blog/karl" }
         ]
     },
