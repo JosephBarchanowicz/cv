@@ -13,7 +13,7 @@ const PROFILE_SRC = "/joe.jpeg";
 
 // Optional blog images (drop files into /public and update names)
 const KARL_IMAGES = [
-    { src: "/karl-1.jpg", alt: "K.A.R.L. chassis mockup", caption: "First chassis mockup and wiring." },
+    { src: "/mock_mk1_chassis.jpg", alt: "K.A.R.L. chassis mockup", caption: "First chassis mockup and wiring." },
     { src: "/karl-2.jpg", alt: "Sensor stack", caption: "IMU + encoder integration test." },
     { src: "/karl-3.jpg", alt: "Field test", caption: "Initial outdoor test loop." }
 ];
