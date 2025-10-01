@@ -185,7 +185,7 @@ function HomePage() {
                             <CardHeader><CardTitle className="flex items-center gap-2"><SquareCode className="h-5 w-5"/>Quick Links</CardTitle></CardHeader>
                             <CardContent>
                                 <ul className="space-y-3 text-sm">
-                                    <li><a className="hover:underline" href="https://github.com/JosephBarchanowicz/Python-Practice">GitHub • Code samples</a></li>
+                                    <li><a className="hover:underline" href="https://github.com/JosephBarchanowicz/Example_Code">GitHub • Code samples</a></li>
                                     <li><a className="hover:underline" href="/Joe_Barchanowicz_Resume.pdf">Resume (PDF)</a></li>
                                     <li><a className="hover:underline" href="#experience">Recent experience</a></li>
                                     <li><a className="hover:underline" href="#skills">Core skills</a></li>
@@ -420,7 +420,7 @@ function BlogKarl() {
 
                 {/* Footer cta */}
                 <div className="mt-6 flex flex-wrap items-center gap-3">
-                    <a href="https://github.com/JosephBarchanowicz/Python-Practice" className="text-sm underline">Source code</a>
+                    <a href="https://github.com/JosephBarchanowicz/The-KARL-Project" className="text-sm underline">Source code</a>
                     <span className="opacity-60">•</span>
                     <a href="#contact" onClick={(e)=>{e.preventDefault(); navigate("/"); setTimeout(()=>{document.getElementById("contact")?.scrollIntoView({behavior:'smooth'});}, 0);}} className="text-sm underline">Contact me</a>
                 </div>
