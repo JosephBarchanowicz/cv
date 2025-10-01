@@ -13,7 +13,7 @@ const PROFILE_SRC = "/joe.jpeg";
 
 // Optional blog images (drop files into /public and update names)
 const KARL_IMAGES = [
-    { src: "/mock_mk1_chassis.jpg", alt: "K.A.R.L. chassis mockup", caption: "First chassis mockup and wiring." },
+    { src: "/mock_mk1_chassis.jpg", alt: "K.A.R.L. chassis mockup", caption: "First chassis mockup." },
     { src: "/karl-2.jpg", alt: "Sensor stack", caption: "IMU + encoder integration test." },
     { src: "/karl-3.jpg", alt: "Field test", caption: "Initial outdoor test loop." }
 ];
@@ -78,40 +78,26 @@ const projects = [
 // --- Experience data ---
 const experience = [
     {
-        company: "Defense Systems Integrator",
-        role: "Electronics & RF Engineer",
-        location: "Southern California",
-        period: "2021 – 2025",
+        company: "National Wireless",
+        role: "Systems Engineer",
+        period: "2023 – 2025",
         highlights: [
-            "Designed and validated RF subsystems (DMR/TETRA/P25) and mission‑critical comms links.",
-            "Built HIL/SIL-style test benches; automated bring-up with Python and C++ tools.",
-            "Developed firmware utilities for CAN/SPI/I²C/UART; authored SOPs and mentoring guides."
+            "Designed, integrated, and validated industrial/defense radio systems (DMR, TETRA, Analog).",
+            "Implemented IT/OT and SCADA integration to ensure seamless system operation.",
+            "Led drive testing and coverage analysis with scanners and spectrum analyzers to verify mission-critical reliability."
         ],
-        stack: ["Python", "C/C++", "RF", "CAN/SPI/I²C/UART", "Linux"]
+        stack: ["Python", "RF (DMR/TETRA/P25)", "CAN/SPI/I²C/UART", "Linux", "Windows Embedded Compact", "TCP/IP"]
     },
     {
-        company: "Industrial Automation OEM",
-        role: "Embedded Systems Engineer",
-        location: "Southern California",
-        period: "2018 – 2021",
+        company: "SwitchDin",
+        role: "Software Engineer",
+        period: "2022 – 2023",
         highlights: [
-            "Shipped embedded Linux/RTOS control modules for factory equipment and robotics cells.",
-            "Implemented CI/CD for firmware; added unit + hardware-in-the-loop regression suites.",
-            "Created field diagnostics and telemetry pipelines for faster root-cause analysis."
+            "Developed and tested embedded software for solar inverters and DER controllers.",
+            "Implemented communication protocols and system integration to ensure reliability.",
+            "Built and executed validation routines in lab and field environments."
         ],
-        stack: ["Embedded Linux", "RTOS", "Git & CI/CD", "Modbus/TCP", "ROS2 (rclpy)"]
-    },
-    {
-        company: "Renewable Energy Startup",
-        role: "Systems Test & Validation Engineer",
-        location: "Southern California",
-        period: "2015 – 2018",
-        highlights: [
-            "Developed inverter and BMS validation rigs with sensor emulation and safety interlocks.",
-            "Automated endurance and thermal tests; produced traceable reports for certifications.",
-            "Collaborated cross-functionally to harden designs for field reliability."
-        ],
-        stack: ["Python", "DAQ", "Safety Systems", "Networking", "Data Analysis"]
+        stack: ["Python","Linux", "Git & CI/CD", "Modbus/TCP", "CAN Bus", "Uart", "SPI", "I2C"]
     }
 ];
 
@@ -180,7 +166,9 @@ function HomePage() {
                 <div className="mx-auto max-w-6xl px-4 py-20 md:py-28 grid md:grid-cols-12 gap-10 items-center">
                     <motion.div initial={{opacity:0,y:12}} animate={{opacity:1,y:0}} transition={{duration:0.6}} className="md:col-span-7 flex flex-col items-center text-center">
                         <h1 className="text-3xl md:text-5xl font-semibold leading-tight">Maker at heart, Engineer by trade.</h1>
-                        <p className="mt-4 md:text-lg text-slate-300">I’m Joe Barchanowicz — an electronics and RF engineer who is also a passionate maker and coder. I love building things, experimenting with hardware and software, and creating systems that are both functional and reliable. I have worked across defense, industrial, and renewable energy fields, applying my skills to diverse and challenging environments.</p>
+                        <p className="mt-4 md:text-lg text-slate-300">Electronics and RF engineer with a passion for coding, robotics, and hands-on problem solving.
+                            Experienced across defense, industrial, and renewable energy sectors, I specialize in building reliable systems that bridge hardware and software.
+                            I thrive on experimenting, learning, and turning complex challenges into practical, working solutions.</p>
                         <div className="mt-6 flex gap-3 flex-wrap justify-center">
                             <a className="inline-block" href="#projects"><Button asChild><span>View Projects</span></Button></a>
                             <a className="inline-block" href="#contact"><Button variant="secondary" asChild><span className="inline-flex items-center"><Mail className="mr-2 h-4 w-4"/>Get in touch</span></Button></a>
@@ -216,14 +204,16 @@ function HomePage() {
                     <div className="md:col-span-12"><h2 className="text-3xl font-semibold mb-2">About</h2></div>
                     <div className="md:col-span-5">
                         <p className="text-lg leading-snug text-slate-200">
-                            I’m Joe Barchanowicz — an electronics and RF engineer who is also a passionate maker and coder. I love building things, experimenting with hardware and software, and creating systems that are both functional and reliable. I have worked across defense, industrial, and renewable energy fields, applying my skills to diverse and challenging environments.
+                            I’m Joe Barchanowicz — an engineer by trade and a maker at heart.
+                            Over the years I’ve worked on mission-critical communications, renewable energy platforms, and robotics projects, always blending curiosity with technical depth.
+                            Whether coding firmware, integrating RF systems, or prototyping with STM32, Arduino, and Raspberry Pi Pico, I love creating systems that don’t just work — they endure in real-world conditions.
                         </p>
                     </div>
                     <div className="md:col-span-7">
                         <ul className="grid gap-2 text-base text-slate-200 leading-snug">
-                            <li>• Experienced in building and refining test harnesses and firmware tools for CAN/SPI/I²C/UART buses — I enjoy tackling complex technical problems and turning them into practical solutions.</li>
-                            <li>• Naturally curious and hands-on — I enjoy taking things apart, understanding how they work, and pushing myself to create better systems.</li>
-                            <li>• Driven by a maker mindset: from robots to STM32/Arduino/Pico projects, I thrive on experimenting and building practical, working solutions.</li>
+                            <li>• Curious and hands-on engineer who thrives on understanding systems deeply and improving their performance.</li>
+                            <li>• Maker-driven mindset, shown through robotics and microcontroller projects (STM32, Arduino, Raspberry Pi Pico) that turn ideas into working prototypes.</li>
+                            <li>• Skilled in developing firmware tools for CAN, SPI, I²C, and UART, solving complex technical challenges with practical solutions.</li>
                         </ul>
                     </div>
                 </div>
@@ -265,28 +255,31 @@ function HomePage() {
             {/* Experience */}
             <section id="experience" className="mx-auto max-w-6xl px-4 py-16">
                 <h2 className="text-2xl font-semibold mb-6">Experience</h2>
-                <div className="grid gap-6">
+                <div className="grid gap-6 md:grid-cols-2">
                     {experience.map((job) => (
-                        <Card key={job.company + job.period} className="bg-white/5 border-white/10">
-                            <CardHeader>
-                                <div className="flex flex-wrap items-baseline justify-between gap-3">
-                                    <CardTitle className="text-xl">{job.role}</CardTitle>
-                                    <span className="text-sm text-slate-400">{job.period}</span>
-                                </div>
-                                <p className="text-slate-300 mt-1">{job.company} • {job.location}</p>
-                            </CardHeader>
-                            <CardContent>
-                                <ul className="list-disc pl-5 space-y-2 text-slate-200">
-                                    {job.highlights.map((h, i) => (<li key={i}>{h}</li>))}
-                                </ul>
-                                <div className="mt-4 flex flex-wrap gap-2">
-                                    {job.stack.map((t) => (<Badge key={t} className="bg-white/10 text-slate-200 border-white/10">{t}</Badge>))}
-                                </div>
-                            </CardContent>
-                        </Card>
+                        <motion.div key={job.company + job.period} initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+                            <Card className="h-full bg-white/5 border-white/10">
+                                <CardHeader>
+                                    <div className="flex flex-wrap items-baseline justify-between gap-3">
+                                        <CardTitle className="text-xl">{job.role}</CardTitle>
+                                        <span className="text-sm text-slate-400">{job.period}</span>
+                                    </div>
+                                    <p className="text-slate-300 mt-1">{job.company}</p>
+                                </CardHeader>
+                                <CardContent>
+                                    <ul className="list-disc pl-5 space-y-2 text-slate-200">
+                                        {job.highlights.map((h, i) => (<li key={i}>{h}</li>))}
+                                    </ul>
+                                    <div className="mt-4 flex flex-wrap gap-2">
+                                        {job.stack.map((t) => (<Badge key={t} className="bg-white/10 text-slate-200 border-white/10">{t}</Badge>))}
+                                    </div>
+                                </CardContent>
+                            </Card>
+                        </motion.div>
                     ))}
                 </div>
             </section>
+
 
             {/* Skills */}
             <section id="skills" className="mx-auto max-w-6xl px-4 py-16">
